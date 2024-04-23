@@ -1,6 +1,7 @@
 # Compiler files
-cache/
-out/
+/cache/
+out/*
+!out/UniswapV2Pair.sol/
 
 # Ignores development broadcast logs
 !/broadcast

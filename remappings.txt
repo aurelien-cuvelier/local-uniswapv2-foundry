@@ -1,0 +1,3 @@
+@uniswap/v2-core/contracts/=lib/v2-core/contracts/
+@uniswap/v2-periphery/contracts/=lib/v2-periphery/contracts/
+@uniswap/lib/contracts/=lib/solidity-lib/contracts/

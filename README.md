@@ -1,66 +1,31 @@
-## Foundry
+# Local Uniswap V2 using Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repo allows you to deploy a working version of UniswapV2 onto your local foundry environement. This allows you to save a lot fo time if you want to test anything related to UniswapV2 with foundry, without having to fork anything from mainnet (or anywhere else).
 
-Foundry consists of:
+This repo is the result of a youtube video i made, if you want to see the whole process feel free to check it out:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+The lib directory contains an un-linked submodule (v2-periphery), this is necessary as re-compiling the UniswapV2Pair smart-contract on your own machine, will prevent you to properly use the Router.
 
-## Documentation
+### To fork the repo and the dependencies:
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```sh
+git clone https://github.com/ac57100/local-uniswap-v2-foundry.git --recursive
 ```
 
-### Test
+or
 
-```shell
-$ forge test
+```sh
+git clone https://github.com/ac57100/local-uniswap-v2-foundry.git
+cd local-uniswap-v2-foundry/
+git submodule update --init
 ```
 
-### Format
+### To test that you properly installed everything:
 
-```shell
-$ forge fmt
+```sh
+forge test --initial-balance 10000000000000000000
 ```
 
-### Gas Snapshots
+You should get 4 passing tests our of 4.
 
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+The Uniswap V2 Router, WETH & Uniswap V2 Factory are deployed on the same addresses as on mainnet.
