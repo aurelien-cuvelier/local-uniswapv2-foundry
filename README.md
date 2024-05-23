@@ -10,13 +10,13 @@ The lib directory contains an un-linked submodule (v2-periphery), this is necess
 ### To fork the repo and the dependencies:
 
 ```sh
-git clone https://github.com/aurelien-cuvelier/local-uniswap-v2-foundry.git --recursive
+git clone https://github.com/aurelien-cuvelier/local-uniswapv2-foundry.git --recursive
 ```
 
 or
 
 ```sh
-git clone https://github.com/aurelien-cuvelier/local-uniswap-v2-foundry.git
+git clone https://github.com/aurelien-cuvelier/local-uniswapv2-foundry.git
 cd local-uniswap-v2-foundry/
 git submodule update --init
 ```
