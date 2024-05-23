@@ -33,6 +33,8 @@ forge build
 forge test --initial-balance 10000000000000000000
 ```
 
+Note: It seems that the last forge version has an unexpected behavior, and it won't find the correct path to the artifacts. This issue is described here (https://github.com/foundry-rs/foundry/issues/7973), if you also experience this issue, try adding "out/" at the begining of each of the 3 paths where "deployCodeTo" is called in the Deployer script and you should be fine.
+
 You should get 4 passing tests our of 4.
 
 The Uniswap V2 Router, WETH & Uniswap V2 Factory are deployed on the same addresses as on mainnet.
