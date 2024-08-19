@@ -8,7 +8,7 @@ import {IUniswapV2Router02} from "@uniswap/v2-periphery/contracts/interfaces/IUn
 import {IUniswapV2Router01} from "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol";
 import {WETH} from "solmate/tokens/WETH.sol";
 
-import {Token} from "../src/Token.sol";
+import {Token} from "../src/TokenTest.sol";
 
 contract UniswapTests is Test {
     IUniswapV2Factory factory =

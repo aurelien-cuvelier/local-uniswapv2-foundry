@@ -1,0 +1,49 @@
+{
+  "transactions": [
+    {
+      "hash": "0xf2a08f9ea3d9785794761eb4706b2f9f3b5b2f08a484d9b27f60bb1cb4ec418f",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x61c93cc3f7e42f00c52774e4d8acf706597994f7",
+      "function": "changeBlockDelay4568468541621584(uint8)",
+      "arguments": [
+        "1"
+      ],
+      "transaction": {
+        "from": "0x537753bd5e53467f21f28746a3ffcb54e1ea2bee",
+        "to": "0x61c93cc3f7e42f00c52774e4d8acf706597994f7",
+        "gas": "0x901f",
+        "value": "0x0",
+        "input": "0x2f1cb2960000000000000000000000000000000000000000000000000000000000000001",
+        "nonce": "0xc",
+        "chainId": "0x1"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [
+    {
+      "status": "0x1",
+      "cumulativeGasUsed": "0x955d83",
+      "logs": [],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "type": "0x2",
+      "transactionHash": "0xf2a08f9ea3d9785794761eb4706b2f9f3b5b2f08a484d9b27f60bb1cb4ec418f",
+      "transactionIndex": "0x71",
+      "blockHash": "0x8b27330d531f87c67ab1c53fb505cedad7d47f76e25b7dcca7a4ecf31ac3dc56",
+      "blockNumber": "0x139c9d3",
+      "gasUsed": "0x6858",
+      "effectiveGasPrice": "0x68f39cee",
+      "from": "0x537753bd5e53467f21f28746a3ffcb54e1ea2bee",
+      "to": "0x61c93cc3f7e42f00c52774e4d8acf706597994f7",
+      "contractAddress": null
+    }
+  ],
+  "libraries": [],
+  "pending": [],
+  "returns": {},
+  "timestamp": 1724091796,
+  "chain": 1,
+  "commit": "406bfa2"
+}
