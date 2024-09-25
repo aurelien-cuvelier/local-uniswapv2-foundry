@@ -2,6 +2,14 @@
 pragma solidity 0.8.23;
 
 /**
+ * 
+ *  ███    ██ ███████ ██ ██████   ██████      ██████  ███████ ██████  ███████ 
+    ████   ██ ██      ██ ██   ██ ██    ██     ██   ██ ██      ██   ██ ██      
+    ██ ██  ██ █████   ██ ██████  ██    ██     ██████  █████   ██████  █████   
+    ██  ██ ██ ██      ██ ██   ██ ██    ██     ██      ██      ██      ██      
+    ██   ████ ███████ ██ ██   ██  ██████      ██      ███████ ██      ███████ 
+
+
  * https://neiropepeerc.com/
  * https://x.com/NepeOnEth
  * https://t.me/NepeOnETH
@@ -96,6 +104,8 @@ interface IUniswapV2Router02 {
 
     function WETH() external pure returns (address);
 
+    function WETH9() external pure returns (address);
+
     function addLiquidityETH(
         address token,
         uint amountTokenDesired,
@@ -109,8 +119,7 @@ interface IUniswapV2Router02 {
         returns (uint amountToken, uint amountETH, uint liquidity);
 }
 
-contract Token is Context, IERC20, Ownable {
-    //using SafeMath for uint256;
+contract ERC20 is Context, IERC20, Ownable {
     mapping(address => uint256) private _balances;
     IUniswapV2Router02 private uniswapRouterV2;
     mapping(address => mapping(address => uint256)) private _allowances;
@@ -118,8 +127,8 @@ contract Token is Context, IERC20, Ownable {
 
     uint8 private constant _decimals = 18;
     uint256 private constant _tTotal = 100_000_000_000 * 10 ** _decimals;
-    string private constant _name = unicode"NEIRO PEPE";
-    string private constant _symbol = unicode"NEPEPE";
+    string private constant _name = unicode"Neiro PEPE";
+    string private constant _symbol = unicode"$NPEPE";
 
     IUniswapV2Router02 private uniswapV2Router;
     address private uniswapV2Pair;
